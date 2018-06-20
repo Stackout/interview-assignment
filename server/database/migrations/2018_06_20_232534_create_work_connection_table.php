@@ -28,6 +28,6 @@ class CreateWorkConnectionTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('work_connection');
     }
 }
