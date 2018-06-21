@@ -38,8 +38,8 @@
               {{person.address.street}}<br/>
               {{ person.address.city }} {{person.address.state}}, {{person.address.postal_code}}
             </p>
-            <h5>Colleagues</h5>
             {% if person.colleagues|length > 0 %}
+            <h5>Colleagues</h5>
             <div class="d-flex flex-column">
               {% for colleague in person.colleagues %}
                 <a href="/ch1/people/{{colleague.id}}">{{colleague.first_name}} {{colleague.last_name}}</a>
