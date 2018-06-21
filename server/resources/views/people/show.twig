@@ -40,9 +40,9 @@
             </p>
             <h5>Colleagues</h5>
             <div class="d-flex flex-column">
-              <a href="#">Delbert Wiegand</a>
-              <a href="#">Mike Runolfsson</a>
-              <a href="#">Carmella Greenfelder</a>
+              {% for colleague in person.colleagues %}
+                <a href="/ch1/people/{{colleague.id}}">{{colleague.first_name}} {{colleague.last_name}}</a>
+              {% endfor %}
             </div>
           </div>
       </div>
