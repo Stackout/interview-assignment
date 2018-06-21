@@ -1,6 +1,5 @@
 import React from 'react'
 import { cx, css } from 'emotion'
-import Spinner from 'app/components/Spinner'
 
 const styles = {
   app: css`

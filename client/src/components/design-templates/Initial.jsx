@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { fetchPeople } from '../../actions/people';
 import { cx, css } from 'react-emotion'
 
 const styles = {
