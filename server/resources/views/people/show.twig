@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ozella Nicolas - LinkedUp</title>
+    <title>{{ person.first_name }} {{person.last_name}} - LinkedUp</title>
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-sm py-3 border-bottom">
           <div class="d-flex justify-content-between">
-            <h1>Ozella Nicolas</h1>
+            <h1>{{ person.first_name }} {{person.last_name}}</h1>
             <a class="pull-right" href="#">View List</a>
           </div>
         </div>
@@ -23,20 +23,20 @@
       <div class="row my-3">
           <div class="col-sm-4">
             <div class="card">
-              <img class="card-img-top" src="https://www.gravatar.com/avatar/8782feacb73d12f97b5507b0fead8fb8?s=400&amp;d=identicon&amp;r=g" alt="Ozella Nicolas" />
+              <img class="card-img-top" src="https://www.gravatar.com/avatar/8782feacb73d12f97b5507b0fead8fb8?s=400&amp;d=identicon&amp;r=g" alt="{{ person.first_name }} {{person.last_name}}" />
             </div>
           </div>
           <div class="col-sm-6">
             <h5>Name</h5>
-            <p>Nicolas, Ozella</p>
+            <p>{{person.last_name}}, {{person.first_name}}</p>
             <h5>Email Address</h5>
             <p>
-              <a href="mailto:ozella.nicolas@example.org">ozella.nicolas@example.org</a>
+              <a href="mailto:{{person.email}}">{{person.email}}</a>
             </p>
             <h5>Address</h5>
             <p>
-              6811 Harber Creek Apt. 882<br/>
-              East Catherine ME, 71055-6986
+              {{person.address.street}}<br/>
+              {{ person.address.city }} {{person.address.state}}, {{person.address.postal_code}}
             </p>
             <h5>Colleagues</h5>
             <div class="d-flex flex-column">

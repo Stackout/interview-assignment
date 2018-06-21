@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
+use App\Person;
+
 class People extends Controller
 {
     /**
@@ -15,7 +17,10 @@ class People extends Controller
      */
     public function index(Request $request)
     {
-        return view('people/index');
+        // Get all People
+        $people = Person::all();
+
+        return view('people.index')->with('people', $people);
     }
 
     /**
@@ -27,6 +32,8 @@ class People extends Controller
      */
     public function show(Request $request, $id)
     {
-        return view('people/show');
+        // Show one person
+        $person = Person::findOrFail($id);
+        return view('people.show')->with('person', $person);
     }
 }

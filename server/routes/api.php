@@ -14,3 +14,9 @@ use Illuminate\Http\Request;
 */
 
 // Add API Chapter 2 routes here.
+
+// Gets all the people
+Route::get('/people')->uses('People@all')->name('people.all');
+
+// Gets a person by their id
+Route::get('/people/{id}')->uses('People@getSingle')->name('people.single');

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
 {
+    
     /**
      * All people have many colleague connections.
      */
@@ -21,6 +22,6 @@ class Person extends Model
      */
     public function address()
     {
-        return $this->hasOne(Address::class);
+        return $this->belongsTo(Address::class);
     }
 }
