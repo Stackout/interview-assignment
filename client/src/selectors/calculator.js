@@ -15,3 +15,4 @@ export const canAddFactor = createSelector(
   [getFactors],
   factors => factors.size < 10
 )
+ 

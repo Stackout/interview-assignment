@@ -24,4 +24,12 @@ class Person extends Model
     {
         return $this->belongsTo(Address::class);
     }
+
+    /**
+     * Generate Gravatar Url
+     */
+    public function gravatarUrl()
+    {
+        return 'http://www.gravatar.com/avatar/'.md5($this->email);
+    }
 }
